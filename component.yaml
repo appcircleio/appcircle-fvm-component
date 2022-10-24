@@ -1,0 +1,15 @@
+platform: Common
+buildPlatform: Flutter
+displayName: Install Flutter Version Manager
+description: "Install Flutter with FVM"
+inputs:
+- key: "AC_SELECTED_FLUTTER_VERSION"
+  isRequired: false
+  title: Selected Flutter Version
+  description: "Specifies the Flutter version to install. Defaults to: stable. The version you set on config section will override this setting."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
