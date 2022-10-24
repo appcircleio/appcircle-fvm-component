@@ -28,6 +28,7 @@ if File.exist?(fvm_config)
 end
 puts "Setting version to #{version}"
 
+run_command("fvm install #{version}")
 run_command("fvm global #{version}")
 ENV['PATH'] = "#{ENV['PATH']}:#{ENV['HOME']}/fvm/default/bin"
 run_command('fvm --version')
